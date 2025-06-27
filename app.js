@@ -55,7 +55,7 @@ app.post('/login', async (req, res) => {
         if (match) {
             req.session.loggedIn = true;
             req.session.username = username;
-            return res.redirect('/https://barbershop-dejo.onrender.com/gallery.html');
+            return res.redirect('/gallery.html');
         }
     }
 
