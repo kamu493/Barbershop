@@ -63,7 +63,7 @@ app.post('/login', async (req, res) => {
 });
 
 // Protect gallery page
-app.get('/gallery.html', (req, res, next) => {
+app.get('/https://barbershop-dejo.onrender.com/gallery.html', (req, res, next) => {
     if (req.session.loggedIn) {
         return next(); // continue to static file
     }
