@@ -55,7 +55,7 @@ app.post('/login', async (req, res) => {
         if (match) {
             req.session.loggedIn = true;
             req.session.username = username;
-            return res.redirect('/gallery.html');
+            return res.redirect('/https://barbershop-dejo.onrender.com/gallery.html');
         }
     }
 
@@ -63,7 +63,7 @@ app.post('/login', async (req, res) => {
 });
 
 // Protect gallery page
-app.get('/https://barbershop-dejo.onrender.com/gallery.html', (req, res, next) => {
+app.get('/gallery.html', (req, res, next) => {
     if (req.session.loggedIn) {
         return next(); // continue to static file
     }
