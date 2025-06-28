@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,7 @@
         <img src="images/images0.jpg" alt="Jackiano The Barber Logo" width="80px">
         <ul class="sidebar-nav">
             <li><a href="index.html">Home</a></li>
-<li><a href="index2.html">Contact</a></li>
+            <li><a href="index2.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -26,16 +25,9 @@
     </header>
 
     <section class="touch-gallery">
-  <h2>Our Work</h2>
-  <div class="gallery-container" id="gallery">
-    <img src="images/images1.jpg" alt="Style 1" />
-    <img src="images/images2.jpg" alt="Style 2" />
-    <img src="images/images3.jpg" alt="Style 3" />
-    <img src="images/images4.jpg" alt="Style 4" />
-    <img src="images/images5.jpg" alt="Style 5" />
-    <img src="images/images6.jpg" alt="Style 6" />
-  </div>
-</section>
+        <h2>Our Work</h2>
+        <div class="gallery-container" id="galleryGrid"></div>
+    </section>
 
     <h1 id="moving-title">WELCOME TO JACKIANO THE BARBER</h1>
     <p>Premium haircuts with style and precision</p>
@@ -73,36 +65,33 @@
         <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <a href="https://www.google.com/maps/dir/?api=1&destination=Klipfontein+eMalahleni" target="_blank" class="btn">Get Directions</a>
     </section>
-    
+
     <section class="comments">
-  <h2>Comments</h2>
-
-  <div class="comment">
-    <div class="avatar">J</div>
-    <div class="comment-content">
-      <p class="comment-name">Jack</p>
-      <p class="comment-text">This is the best fade I’ve ever had!</p>
-      <p class="comment-time">June 20, 2025 at 10:45 AM</p>
-    </div>
-  </div>
-
-  <div class="comment">
-    <div class="avatar">M</div>
-    <div class="comment-content">
-      <p class="comment-name">Musa</p>
-      <p class="comment-text">Always on point. Keep it up, Jackiano!</p>
-      <p class="comment-time">June 19, 2025 at 5:12 PM</p>
-    </div>
-  </div>
-
-  <!-- Comment form -->
-  <form class="comment-form">
-    <h3>Leave a Comment</h3>
-    <input type="text" placeholder="Your name" required>
-    <textarea placeholder="Write your comment..." rows="4" required></textarea>
-    <button type="submit">Post Comment</button>
-  </form>
-</section>
+        <h2>Comments</h2>
+        <div class="comment">
+            <div class="avatar">J</div>
+            <div class="comment-content">
+                <p class="comment-name">Jack</p>
+                <p class="comment-text">This is the best fade I’ve ever had!</p>
+                <p class="comment-time">June 20, 2025 at 10:45 AM</p>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="avatar">M</div>
+            <div class="comment-content">
+                <p class="comment-name">Musa</p>
+                <p class="comment-text">Always on point. Keep it up, Jackiano!</p>
+                <p class="comment-time">June 19, 2025 at 5:12 PM</p>
+            </div>
+        </div>
+        <!-- Comment form -->
+        <form class="comment-form">
+            <h3>Leave a Comment</h3>
+            <input type="text" placeholder="Your name" required>
+            <textarea placeholder="Write your comment..." rows="4" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+    </section>
 
     <footer>
         <p>&copy;2025 Jackiano The Barber. All rights reserved</p>
@@ -111,8 +100,8 @@
     <a href="https://wa.me/27638096949" style="position:fixed;bottom:20px;right:20px;z-index:9999;">
         <img src="images/whatsapp0.jpg" alt="Chat with us" style="width:60px;height:60px;">
     </a>
-    
-        <!-- Load gallery images from backend -->
+
+    <!-- Load gallery images from backend -->
     <script>
         async function loadGallery() {
             try {
@@ -191,36 +180,37 @@
             loadGallery();
             loadSliderGallery();
         };
-    
-  const gallery = document.getElementById("gallery");
-  let isDown = false;
-  let startX;
-  let scrollLeft;
 
-  gallery.addEventListener("mousedown", (e) => {
-    isDown = true;
-    gallery.classList.add("active");
-    startX = e.pageX - gallery.offsetLeft;
-    scrollLeft = gallery.scrollLeft;
-  });
+        // Scrollable gallery interaction
+        const gallery = document.getElementById("galleryGrid");
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-  gallery.addEventListener("mouseleave", () => {
-    isDown = false;
-    gallery.classList.remove("active");
-  });
+        gallery.addEventListener("mousedown", (e) => {
+            isDown = true;
+            gallery.classList.add("active");
+            startX = e.pageX - gallery.offsetLeft;
+            scrollLeft = gallery.scrollLeft;
+        });
 
-  gallery.addEventListener("mouseup", () => {
-    isDown = false;
-    gallery.classList.remove("active");
-  });
+        gallery.addEventListener("mouseleave", () => {
+            isDown = false;
+            gallery.classList.remove("active");
+        });
 
-  gallery.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - gallery.offsetLeft;
-    const walk = (x - startX) * 2;
-    gallery.scrollLeft = scrollLeft - walk;
-  });
+        gallery.addEventListener("mouseup", () => {
+            isDown = false;
+            gallery.classList.remove("active");
+        });
+
+        gallery.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - gallery.offsetLeft;
+            const walk = (x - startX) * 2;
+            gallery.scrollLeft = scrollLeft - walk;
+        });
     </script>
 </body>
 </html>
