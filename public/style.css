@@ -1,0 +1,487 @@
+
+/* Reset & Base Styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("images/images2.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.6);
+}
+
+nav img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 3%;
+    align-items: center;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+    
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hero Header */
+.hero-header {
+    background-color: #1c1c1c;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.cta-banner{
+    background-color: #1c1c1c;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.hero-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cta-banner h1 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero-header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.cta-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+
+.hero-header .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.contact-info a{
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-header .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Gallery and Slider */
+.touch-gallery {
+    color: white;
+    border-radius: 20px;
+}
+
+.touch-gallery h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.gallery-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery-item .label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* transparent background */
+  color: white;
+  font-size: 14px;
+  padding: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.gallery-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+    padding-top:20px;
+}
+
+.gallery-container img {
+  flex-shrink: 0;
+  width: 270px;
+  height: 270px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
+.slider-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.5s ease-in-out;
+    justify-content: baseline;
+}
+
+.slider img {
+  flex-shrink: 0;
+  width: 65%;
+  max-width: 600px;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 15px;
+  background-color: #000;
+}
+
+.indicators {
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #999;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* Service Table */
+.menu {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+}
+
+.menu h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.menu table {
+    width: 100%;
+    color: white;
+    border-collapse: collapse;
+}
+
+.menu table th,
+.menu table td {
+    padding: 10px;
+    border-bottom: 1px solid #888;
+    text-align: left;
+}
+
+/* Community Service */
+.community-service {
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.community-service h2 {
+    color: white;
+}
+
+.community-service p {
+    color: #ccc;
+}
+
+.community-service .btn {
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Map Section */
+.map-section iframe {
+    
+}
+
+/*Comment section*/
+.comments {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.comments h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background: #2b2b2b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #007bff;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.comment-content {
+  text-align: left;
+}
+
+.comment-name {
+  font-weight: bold;
+  color: #ddd;
+  margin: 0;
+}
+
+.comment-text {
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.comment-time {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Comment Form */
+.comment-form {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.comment-form h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #f5f5f5;
+  color: black;
+}
+
+.comment-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Testimonials */
+.testimonials {
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    color: #ccc;
+}
+
+.testimonials cite {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Contact + Form */
+.contact-info {
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #f5f5f5;
+    color: black;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+/* About Page */
+.about {
+    padding: 30px 20px;
+}
+
+.about h2 {
+    color: #fff;
+    margin-top: 30px;
+}
+
+.about img.barber-photo {
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+/* WhatsApp Button */
+a[href*="wa.me"] img {
+    box-shadow: 0 0 10px green;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+a[href*="wa.me"] img:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#moving-title {
+    animation: fadeIn 1.5s ease-out;
+}
